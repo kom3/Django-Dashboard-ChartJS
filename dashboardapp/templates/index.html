@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <title>Github | Features dashboard</title>
+    <script defer src="{% static 'chartjs/package/dist/chart.js' %}"></script>
+    <script defer src="{% static 'index.js' %}"></script>
+</head>
+
+<body>
+    <div class="title">
+        <div>Application Build Analyser</div>
+    </div>
+
+    <div class="mainlayout">
+        <div class="options-blk">
+            <div>Release number:</div>
+            <select class="dropdown-menu" name="relnum" id="relnum">
+                <option value="default">Select release number</option>
+                <option value="1.0.0">1.0.0</option>
+                <option value="1.0.0">1.0.1</option>
+                <option value="1.0.0">1.0.2</option>
+                <option value="1.0.0">1.0.3</option>
+            </select>
+            <div>Build number:</div>
+            <select class="dropdown-menu" name="relnum" id="relnum">
+                <option value="default">Select build number</option>
+                <option value="1.0.0">1.0.0</option>
+                <option value="1.0.0">1.0.1</option>
+                <option value="1.0.0">1.0.2</option>
+                <option value="1.0.0">1.0.3</option>
+            </select>
+            <button class="anlyz-btn">Analyse</button>
+        </div>
+
+        <div class="graph-blk">
+            <canvas class="canvas-blk" id="myChart"></canvas>
+        </div>
+    </div>
+</body>
+
+</html>
