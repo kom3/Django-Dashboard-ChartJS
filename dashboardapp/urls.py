@@ -19,4 +19,6 @@ from . import views
 
 urlpatterns = [
     path('', views.home),
+    path('getbuildnumber', views.getbuildnumber),
+    path('getgraphdata', views.getgraphdata),
 ]

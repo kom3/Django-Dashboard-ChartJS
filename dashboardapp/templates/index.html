@@ -20,22 +20,19 @@
     <div class="mainlayout">
         <div class="options-blk">
             <div>Release number:</div>
-            <select class="dropdown-menu" name="relnum" id="relnum">
+            <select class="dropdown-menu" name="relnum" id="relnum" onchange="getbuildnumber()">
                 <option value="default">Select release number</option>
+                <option value="1.0.0">BOSS</option>
                 <option value="1.0.0">1.0.0</option>
                 <option value="1.0.0">1.0.1</option>
                 <option value="1.0.0">1.0.2</option>
                 <option value="1.0.0">1.0.3</option>
             </select>
             <div>Build number:</div>
-            <select class="dropdown-menu" name="relnum" id="relnum">
+            <select class="dropdown-menu" name="buildnum" id="buildnum">
                 <option value="default">Select build number</option>
-                <option value="1.0.0">1.0.0</option>
-                <option value="1.0.0">1.0.1</option>
-                <option value="1.0.0">1.0.2</option>
-                <option value="1.0.0">1.0.3</option>
             </select>
-            <button class="anlyz-btn">Analyse</button>
+            <button class="anlyz-btn" onclick="gengraph()">Analyse</button>
         </div>
 
         <div class="graph-blk">
