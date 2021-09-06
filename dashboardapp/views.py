@@ -1,10 +1,11 @@
 import json
 from django.http.response import HttpResponse
 from django.shortcuts import render
+from django.views.decorators.csrf import ensure_csrf_cookie
 
 # Create your views here.
 
-
+@ensure_csrf_cookie
 def home(request):
     return render(request, "index.html")
 
@@ -16,7 +17,6 @@ def getbuildnumber(request):
 
 def getgraphdata(request):
     build_num = json.loads(request.body.decode()).get('buildnum')
-    print(build_num)
     if build_num == "1.1.0":
         data = {"affected_rate": [10, 20, 45, 60]}
     elif build_num == "1.2.0":
